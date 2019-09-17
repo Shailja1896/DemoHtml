@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  showImg: boolean;
+  isEditable: boolean;
+  inputField: string;
+  progreessValue: number;
+
+  startProgress() {
+    for (let i = 0; i <= 5; i++) {
+      this.progreessValue = i * 20;
+    }
+  }
 }

@@ -1,0 +1,20 @@
+.topnav {
+    font-family: 'Courier New';
+    background-color: cadetblue;
+    padding: 1%;
+    margin: 10px 0px 0px 0px;
+}
+
+nav a {
+    color: white;
+}
+
+.text {
+    font-family: cursive;
+    font-size: -webkit-xxx-large;
+    background-color: #f8f6f6;
+    color: cadetblue;
+    border-radius: 7%;
+    width: 12%;
+    text-align: center;
+}
