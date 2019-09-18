@@ -45,9 +45,14 @@
 
 <body>
 
-<app-header></app-header>
-
-<app-intro></app-intro>
+  <app-header></app-header>
+  <!-- <span *ngFor="let value of ngContentList">
+    <div *ngIf="value.isTrue">{{value.value}}</div>
+  </span>
+  <ng-container *ngFor="let value of ngContentList">
+    <div *ngIf="value.isTrue">{{value.value}}</div>
+  </ng-container> -->
+  <app-intro></app-intro>
   <app-highlight></app-highlight>
   <app-footer></app-footer>
 

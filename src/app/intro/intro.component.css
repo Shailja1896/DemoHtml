@@ -12,3 +12,9 @@
     background-color: #474e5d; /* Dark Blue */
     color: #ffffff;
   }
+
+  img {
+    display:inline;
+    height: 350px;
+    width: 350px;
+  }
