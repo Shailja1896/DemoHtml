@@ -6,6 +6,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HighlightComponent } from './highlight/highlight.component';
 import { IntroComponent } from './intro/intro.component';
+import { DxDataGridModule, DxTemplateModule } from 'devextreme-angular';
+
+import { Service } from './app.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +21,11 @@ import { IntroComponent } from './intro/intro.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    DxDataGridModule,
+    DxTemplateModule
   ],
-  providers: [],
+  providers: [Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

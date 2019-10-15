@@ -34,7 +34,7 @@
   <button (click)="startProgress()"><span *ngIf="!isEditable">Add</span><span *ngIf="isEditable">Done</span></button>
 </div> -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -45,17 +45,48 @@
 
 <body>
 
-  <app-header></app-header>
+  <app-header></app-header> -->
   <!-- <span *ngFor="let value of ngContentList">
     <div *ngIf="value.isTrue">{{value.value}}</div>
   </span>
   <ng-container *ngFor="let value of ngContentList">
     <div *ngIf="value.isTrue">{{value.value}}</div>
   </ng-container> -->
-  <app-intro></app-intro>
+  <!-- <app-intro></app-intro>
   <app-highlight></app-highlight>
   <app-footer></app-footer>
 
 </body>
 
-</html>
+</html> -->
+<!-- <dx-text-box width="300"></dx-text-box>
+<dx-button text="Dev Extreme button in angular"></dx-button> -->
+<dx-data-grid id="gridContainer"
+    [dataSource]="employees"
+    [columnAutoWidth]="true"
+    [showBorders]="true"
+    rowTemplate="rowTemplateName">
+
+    <dxi-column caption="Photo" [width]="100" [allowFiltering]="false" [allowSorting]="false"></dxi-column>
+    <dxi-column dataField="Prefix" [width]="70" caption="Title"></dxi-column>
+    <dxi-column dataField="FirstName"></dxi-column>
+    <dxi-column dataField="LastName"></dxi-column>
+    <dxi-column dataField="Position"></dxi-column>
+    <dxi-column dataField="BirthDate" dataType="date"></dxi-column>
+    <dxi-column dataField="HireDate" dataType="date"></dxi-column>
+
+    <tbody class="employee dx-row" *dxTemplate="let employee of 'rowTemplateName'" >
+        <tr class="main-row">
+            <td rowspan="2"><img [src]="employee.data.Picture"/></td>
+            <td>{{employee.data.Prefix}}</td>
+            <td>{{employee.data.FirstName}}</td>
+            <td>{{employee.data.LastName}}</td>
+            <td>{{employee.data.Position}}</td>
+            <td>{{employee.data.BirthDate | date: "yyyy/MM/dd"}}</td>
+            <td>{{employee.data.HireDate | date: "yyyy/MM/dd"}}</td>
+        </tr>
+        <tr class="notes-row">
+            <td colspan="6"><div>{{employee.data.Notes}}</div></td>
+        </tr>
+    </tbody>
+</dx-data-grid>
